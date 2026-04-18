@@ -115,51 +115,63 @@ body {
 ══════════════════════════════════════════ */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 nav.scrolled {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(34px) saturate(220%);
-  -webkit-backdrop-filter: blur(34px) saturate(220%);
-  border-bottom: 1px solid rgba(255, 255, 255, 1);
-  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(40px) saturate(220%);
+  -webkit-backdrop-filter: blur(40px) saturate(220%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
 }
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 10px 24px; max-width: 1160px; margin: 0 auto;
+  padding: 0 32px; height: 64px; max-width: 1200px; margin: 0 auto;
 }
-.nav-logo-img { display: flex; align-items: center; text-decoration: none; }
-.nav-logo-img img { height: 80px; width: auto; }
 
-.nav-links { display: flex; gap: 32px; list-style: none; }
-.nav-links a {
-  font-size: .9rem; font-weight: 600; color: var(--text-muted);
-  text-decoration: none; transition: color .2s;
+/* Brand text logo */
+.nav-brand {
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--text-main);
+  flex-shrink: 0;
 }
-.nav-links a:hover { color: var(--teal); }
+.nav-brand span { color: var(--teal); }
+
+.nav-links { display: flex; gap: 8px; list-style: none; }
+.nav-links a {
+  font-size: .875rem; font-weight: 600; color: var(--text-muted);
+  text-decoration: none; padding: 6px 14px; border-radius: 8px;
+  transition: color .2s, background .2s;
+}
+.nav-links a:hover { color: var(--teal); background: rgba(0,188,212,.07); }
 
 .nav-cta { display: flex; align-items: center; gap: 12px; }
+.nav-btn { padding: 9px 22px !important; font-size: .85rem !important; border-radius: 10px !important; }
 
-.hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
-.hamburger span { display: block; width: 22px; height: 2px; background: var(--text-main); border-radius: 2px; }
+.hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 6px; border-radius: 8px; transition: background .2s; }
+.hamburger:hover { background: rgba(0,0,0,.06); }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text-main); border-radius: 2px; transition: all .3s; }
 
 .mobile-menu {
-  display: none; flex-direction: column; background: var(--white);
-  border-top: 1px solid var(--border); padding: 20px 24px; gap: 4px;
-  box-shadow: var(--shadow-md);
+  display: none; flex-direction: column; background: rgba(255,255,255,0.97);
+  border-top: 1px solid var(--border); padding: 16px 24px 24px; gap: 2px;
+  box-shadow: 0 12px 32px rgba(15,23,42,.1);
 }
 .mobile-menu.open { display: flex; }
 .mobile-menu a {
-  font-size: 1rem; font-weight: 600; color: var(--text-main);
-  text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--border); transition: color .2s;
+  font-size: .95rem; font-weight: 600; color: var(--text-main);
+  text-decoration: none; padding: 11px 0; border-bottom: 1px solid var(--border); transition: color .2s;
 }
 .mobile-menu a:hover { color: var(--teal); }
 
-@media(max-width:768px) { .nav-links, .nav-cta .btn-primary { display: none; } .hamburger { display: flex; } }
+@media(max-width:768px) { .nav-links, .nav-cta .nav-btn { display: none; } .hamburger { display: flex; } }
 
 /* ══════════════════════════════════════════
    HERO
