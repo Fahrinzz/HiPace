@@ -129,8 +129,15 @@ nav.scrolled {
   box-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
 }
 .nav-inner {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: center;
   padding: 0 32px; height: 64px; max-width: 1200px; margin: 0 auto;
+  position: relative;
+}
+.nav-inner .nav-links {
+  flex: 1; justify-content: center;
+}
+.nav-inner .nav-cta {
+  position: absolute; right: 32px;
 }
 
 /* Brand text logo */
