@@ -131,11 +131,14 @@ nav.scrolled {
 }
 .nav-inner {
   display: flex; align-items: center; justify-content: center;
-  padding: 0 32px; height: 64px; max-width: 1200px; margin: 0 auto;
+  padding: 0 32px; height: 100px; max-width: 1200px; margin: 0 auto;
   position: relative;
 }
 .nav-inner .nav-links { flex: 1; justify-content: center; }
 .nav-inner .nav-cta { position: absolute; right: 32px; }
+
+.nav-logo { display: flex; align-items: center; position: absolute; left: 32px; text-decoration: none; }
+.nav-logo img { height: 110px; width: auto; }
 
 .nav-links { display: flex; gap: 4px; list-style: none; }
 .nav-links a {
@@ -217,7 +220,7 @@ nav.scrolled {
 .hero-stat .lbl { font-size: .78rem; color: var(--text-muted); margin-top: 5px; font-weight: 500; }
 
 .hero-visual { position: relative; display: flex; flex-direction: column; gap: 14px; }
-.hero-main-img { height: 340px; border-radius: 16px; overflow: hidden; }
+.hero-main-img { height: 460px; border-radius: 16px; overflow: hidden; }
 .hero-main-img img { width: 100%; height: 100%; object-fit: cover; }
 .hero-thumbs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .hero-thumbs .thumb { height: 130px; border-radius: 12px; overflow: hidden; }
